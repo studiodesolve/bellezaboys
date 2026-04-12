@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza Home | Premium Boys Hostel</title>
+    <meta name="description" content="Belleza Home Boys Hostel - Modern living for students. Pure veg food, 24/7 power backup, high-speed internet, and gym. Only 800m from campus.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo-placeholder.png">
+</head>
+<body>
+    <div class="glow-canvas"></div>
+
+    <!-- Navigation -->
+    <header class="navbar-wrapper">
+        <nav class="navbar glass">
+            <div class="nav-logo">
+                <span class="logo-text">BELLEZA<span>HOME</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+
+                <li><a href="#location">Location</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#book" class="btn btn-primary">Book Now</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge glass">Premium Student Living</div>
+                    <div class="offer-badge">HURRYUP! GET UPTO 25% OFF • BOOK NOW</div>
+                    <h1 class="reveal-text">Elevate Your<br><span class="text-gradient">Hostel Experience.</span></h1>
+                    <p class="hero-subtext reveal-text-slow">A home away from home — designed for comfort, focus, and wellness. Only 800m from campus.</p>
+                    <div class="hero-buttons">
+                        <a href="#amenities" class="btn btn-primary">Explore Features</a>
+                        <a href="#gallery" class="btn btn-secondary glass">View Gallery</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-stack">
+                        <div class="main-img">
+                            <img src="assets/images/hostel_main_new.png" alt="Belleza Home Boys Hostel">
+                        </div>
+                        <div class="floating-badge glass near-badge">
+                            <span class="count">800m</span>
+                            <span class="label">Near Campus</span>
+                        </div>
+                        <div class="floating-badge glass veg-badge">
+                            <span class="count">🥗</span>
+                            <span class="label">Pure Veg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Amenities -->
+        <section id="amenities" class="amenities-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Essential Modern Living</h2>
+                    <p class="section-subtitle">Everything you need to thrive, curated with a deep thinking mind.</p>
+                </div>
+                
+                <div class="bento-grid">
+                    <!-- Veg Food -->
+                    <div class="bento-item glass-card large reveal">
+                        <div class="bento-content">
+                            <span class="icon">🥗</span>
+                            <h3>Pure Veg Nutrition</h3>
+                            <p>Healthy, gourmet pure vegetarian meals served 4 times a day. Quality you can taste.</p>
+                        </div>
+                        <div class="bento-visual food-gallery">
+                            <img src="assets/images/food_thali.jpg" alt="Premium Veg Thali">
+                            <!-- This image matches the Roti Thali look (veg thali) -->
+                            <img src="assets/images/veg_thali.png" alt="Roti Veg Thali">
+                            <img src="assets/images/food_lassi.png" alt="Refreshing Lassi">
+                            <!-- Using the screenshot they referred to -> s een sahot, or the dining area -->
+                            <img src="assets/images/food_3.avif" alt="Food Prep Screenshot">
+                        </div>
+                    </div>
+
+                    <!-- Power -->
+                    <div class="bento-item glass-card small reveal">
+                        <div class="bento-content">
+                            <span class="icon">⚡</span>
+                            <h3>24/7 Energy</h3>
+                            <p>Continuous electricity with smart power backup systems. Study without interruptions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Internet -->
+                    <div class="bento-item glass-card small reveal">
+                        <div class="bento-content">
+                            <span class="icon">🌐</span>
+                            <h3>Gigabit Connectivity</h3>
+                            <p>Free unlimited high-speed internet all the time. Stay connected, stay productive.</p>
+                        </div>
+                    </div>
+
+                    <!-- Gym -->
+                    <div class="bento-item glass-card medium reveal">
+                        <div class="bento-content">
+                            <span class="icon">🏋️‍♂️</span>
+                            <h3>Fitness Area</h3>
+                            <p>Dedicated modern gym space to keep your body as active as your mind.</p>
+                        </div>
+                        <div class="bento-visual">
+                            <img src="assets/images/gym.png" alt="Gym Area">
+                        </div>
+                    </div>
+
+                    <!-- Daily Cleaning -->
+                    <div class="bento-item glass-card small reveal">
+                        <div class="bento-content">
+                            <span class="icon">✨</span>
+                            <h3>Daily Cleaning</h3>
+                            <p>Regular room and bathroom housekeeping ensuring a pristine and hygienic living space daily.</p>
+                        </div>
+                    </div>
+
+                    <!-- Laundry -->
+                    <div class="bento-item glass-card small reveal">
+                        <div class="bento-content">
+                            <span class="icon">🧺</span>
+                            <h3>Laundry Services</h3>
+                            <p>Professional washing and ironing services available to keep your wardrobe fresh on demand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Water -->
+                    <div class="bento-item glass-card small reveal">
+                        <div class="bento-content">
+                            <span class="icon">💧</span>
+                            <h3>Pure Supply</h3>
+                            <p>24/7 Hot and cold water supply for all seasons.</p>
+                        </div>
+                    </div>
+
+                    <!-- Shuttle -->
+                    <div class="bento-item glass-card small reveal">
+                        <div class="bento-content">
+                            <span class="icon">🚐</span>
+                            <h3>Campus Shuttle</h3>
+                            <p>Van and car service for up-down from campus to hostel vice versa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Room Experience Section -->
+        <section id="room-experience" class="room-experience-section container">
+            <div class="section-header">
+                <h2 class="section-title">Room Experience</h2>
+                <p class="section-subtitle">Furnished rooms designed for comfort, focus, and easy daily living.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Main Room Visual -->
+                <div class="bento-item glass-card large reveal">
+                    <div class="bento-content">
+                        <span class="icon">🛏️</span>
+                        <h3>Premium Twin-Sharing</h3>
+                        <p>This room setup shows what students actually use every day: twin beds, shared study desks, and essential furnishings.</p>
+                    </div>
+                    <div class="bento-visual">
+                        <img src="assets/images/room_premium.png" alt="Twin-Sharing Room">
+                    </div>
+                </div>
+
+                <!-- Detail Cards -->
+                <div class="bento-item glass-card small reveal">
+                    <div class="bento-content">
+                        <span class="icon">📚</span>
+                        <h3>Reading Comfort</h3>
+                        <p>Dedicated study tables and chairs support focused work every day.</p>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-card small reveal">
+                    <div class="bento-content">
+                        <span class="icon">📐</span>
+                        <h3>Balanced Living</h3>
+                        <p>Open layouts and practical features keep daily routines easy.</p>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-card small reveal">
+                    <div class="bento-content">
+                        <span class="icon">💡</span>
+                        <h3>Reliable Utility</h3>
+                        <p>Consistent lighting and inverter backup help students stay on schedule.</p>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-card small reveal">
+                    <div class="bento-content">
+                        <span class="icon">🧹</span>
+                        <h3>Neat Daily Setup</h3>
+                        <p>Cleaning support and reliable amenities make the room welcoming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Food Section -->
+        <section id="food" class="food-section">
+            <div class="container food-container">
+                <div class="section-header">
+                    <h2 class="section-title">Gourmet Pure Veg Kitchen</h2>
+                    <p class="section-subtitle">Experience seasonal delights with our curated 4-time meal plan.</p>
+                </div>
+
+                <div class="food-tabs">
+                    <button class="tab-btn active" data-tab="summer">Summer</button>
+                    <button class="tab-btn" data-tab="winter">Winter</button>
+                    <button class="tab-btn" data-tab="monsoon">Monsoon</button>
+                </div>
+
+                <!-- Summer Menu -->
+                <div id="summer" class="menu-content active">
+                    <div class="meal-grid">
+                        <div class="meal-card glass-card">
+                            <span class="time">Breakfast</span>
+                            <h4>Poha & Sprouts</h4>
+                            <p>Light and nutritious, served with fresh seasonal juice.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Lunch</span>
+                            <h4>Cooling Thali</h4>
+                            <p>Curd rice, seasonal gourds, and refreshing buttermilk.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Evening</span>
+                            <h4>Chilled Lassi</h4>
+                            <p>Sweet Punjabi lassi with light snacks.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Dinner</span>
+                            <h4>Light Veggie Mix</h4>
+                            <p>Tawa Roti, Dal Fry, and detoxifying green salad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Winter Menu -->
+                <div id="winter" class="menu-content">
+                    <div class="meal-grid">
+                        <div class="meal-card glass-card">
+                            <span class="time">Breakfast</span>
+                            <h4>Aloo Paratha</h4>
+                            <p>Hot stuffed parathas with white butter and curd.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Lunch</span>
+                            <h4>Rich North Indian</h4>
+                            <p>Paneer butter masala, warm Rotis, and Moong Dal Halwa.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Evening</span>
+                            <h4>Hot Soup & Tea</h4>
+                            <p>Tomato soup or Masala Chai with digestive biscuits.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Dinner</span>
+                            <h4>Wholesome Meal</h4>
+                            <p>Sarson Ka Saag or Mixed Veg with hot Jowar Rotis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monsoon Menu -->
+                <div id="monsoon" class="menu-content">
+                    <div class="meal-grid">
+                        <div class="meal-card glass-card">
+                            <span class="time">Breakfast</span>
+                            <h4>Hot Upma</h4>
+                            <p>Steaming semolina with roasted nuts and ginger tea.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Lunch</span>
+                            <h4>Homestyle Comfort</h4>
+                            <p>Kadhibadi, steamed rice, and spicy seasonal pickles.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Evening</span>
+                            <h4>Crispy Bites</h4>
+                            <p>Mixed veg pakoras with spicy green chutney.</p>
+                        </div>
+                        <div class="meal-card glass-card">
+                            <span class="time">Dinner</span>
+                            <h4>Spiced Lentils</h4>
+                            <p>Panchmel Dal, Rice, and crispy roasted Papad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Booking Section -->
+        <section id="book" class="booking-section">
+            <div class="container">
+                <div class="booking-wrapper glass-card reveal">
+                    <div class="booking-info">
+                        <h2>Secure Your Space</h2>
+                        <p>Join the Belleza Home community. Premium living for serious students.</p>
+                        <ul class="booking-features">
+                            <li>✓ Daily 4-Meal Plan</li>
+                            <li>✓ Laundry Service Included</li>
+                            <li>✓ 24/7 Maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="booking-contact-card">
+                        <div class="qr-wrapper">
+                            <img src="assets/images/qr_code.png" alt="WhatsApp Booking QR Code" class="qr-image">
+                            <p class="scan-text">Scan to WhatsApp & Book</p>
+                            <a href="https://wa.me/919877674657" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Direct Contact</h3>
+                            <div class="contact-info-row">
+                                <span class="icon">👤</span>
+                                <div>
+                                    <span class="label">Owner</span>
+                                    <span class="value">Sanju Syan</span>
+                                </div>
+                            </div>
+                            <div class="contact-info-row">
+                                <span class="icon">✉️</span>
+                                <div>
+                                    <span class="label">Email</span>
+                                    <a href="mailto:bellezaboys132@gmail.com" class="value link">bellezaboys132@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="logo-text">BELLEZA<span>HOME</span></span>
+                <p>Redefining hostel living with modern elements and a creative soul.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Location</h4>
+                <p>800m from Campus Main Gate<br>Modern District</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Belleza Home Boys Hostel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
