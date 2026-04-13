@@ -997,6 +997,14 @@ h1, h2, h3, .logo-text {
         width: 115px !important;
         height: 115px !important;
     }
+    .floating-badge.veg-badge .count {
+        font-size: 3rem !important;
+        margin-bottom: 0 !important;
+    }
+    .floating-badge.veg-badge .label {
+        font-size: 0.9rem !important;
+        font-weight: 800 !important;
+    }
     
     /* Booking Centering */
     .booking-wrapper {
