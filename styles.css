@@ -149,6 +149,57 @@ h1, h2, h3, .logo-text {
     -webkit-text-fill-color: transparent;
 }
 
+/* Floating Elements */
+.trust-pill {
+    position: fixed;
+    top: 100px;
+    right: 24px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: floating 3s ease-in-out infinite;
+}
+
+.trust-pill .star { color: #F59E0B; }
+.trust-pill .platform { font-size: 0.75rem; opacity: 0.7; font-weight: 500; }
+
+.floating-ctas {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1001;
+}
+
+.fab {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fab .icon { font-size: 1.5rem; }
+.fab:hover { transform: scale(1.1) translateY(-5px); }
+.fab-wa { background: #25D366; }
+.fab-call { background: var(--accent-green); }
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
 /* Navigation */
 .navbar-wrapper {
     position: fixed;
@@ -535,6 +586,143 @@ h1, h2, h3, .logo-text {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Room Experience Tabs */
+.room-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.room-tab-btn {
+    padding: 12px 28px;
+    border-radius: 100px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-sub);
+}
+
+.room-tab-btn.active {
+    background: var(--accent-green);
+    color: white;
+    border-color: var(--accent-green);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+}
+
+.room-content {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.room-content.active {
+    display: block;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: var(--section-padding) 0 200px; /* Extra bottom padding for stacking area */
+    background: var(--bg-soft);
+    position: relative;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Large gap for clear separation during stack */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-card {
+    padding: 40px;
+    position: sticky;
+    top: 15vh; /* Card sticks here */
+    width: 100%;
+    transform-origin: center top;
+    transition: all 0.3s ease;
+}
+
+.review-card:nth-child(1) { z-index: 1; top: 15vh; }
+.review-card:nth-child(2) { z-index: 2; top: 18vh; }
+.review-card:nth-child(3) { z-index: 3; top: 21vh; }
+
+.review-card .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.review-header .stars { color: #F59E0B; font-size: 1.25rem; }
+.review-header .name { font-weight: 700; color: var(--text-main); font-size: 1.1rem; }
+.review-card p { font-style: italic; color: var(--text-sub); line-height: 1.8; font-size: 1.1rem; }
+
+/* FAQ Section */
+.faq-section {
+    padding: var(--section-padding) 0;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 24px; /* Default desktop padding */
+}
+
+.faq-item {
+    border-radius: 20px;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--accent-green);
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.faq-answer {
+    padding: 0 32px 32px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    color: var(--accent-green);
+}
+
 /* Party Moment Feature */
 .party-moment {
     margin-top: 60px;
@@ -815,6 +1003,68 @@ h1, h2, h3, .logo-text {
     font-size: 0.9rem;
 }
 
+.footer-address-card {
+    display: block;
+    margin-top: 16px;
+    padding: 20px;
+    text-decoration: none !important;
+    transition: all 0.4s ease;
+    width: 100%;
+    max-width: 350px;
+}
+
+.footer-address-card:hover {
+    border-color: var(--accent-green) !important;
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.15) !important;
+}
+
+.address-content {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.address-content .icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.address-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-main) !important;
+    margin: 0;
+}
+
+/* Location Map */
+.location-map-container {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.location-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 24px;
+}
+
+.map-overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
 /* Animations */
 @keyframes revealText {
     from { opacity: 0; transform: translateY(30px); }
@@ -879,8 +1129,18 @@ h1, h2, h3, .logo-text {
         padding: 0 16px;
     }
     
+    .navbar {
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .nav-links {
         display: none;
+    }
+
+    .nav-cta {
+        margin-left: auto;
+        margin-right: 12px;
     }
     
     .hero-buttons {
@@ -902,7 +1162,17 @@ h1, h2, h3, .logo-text {
     }
     
     .bento-item {
-        padding: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .bento-content .icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
     }
 
     .bento-item.large, .bento-item.medium {
@@ -944,6 +1214,18 @@ h1, h2, h3, .logo-text {
         align-items: center;
         padding-left: 0;
     }
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-address-card, .location-map-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .footer-brand p {
         margin: 16px auto 0;
         text-align: center;
@@ -1027,6 +1309,51 @@ h1, h2, h3, .logo-text {
         word-break: break-all;
         font-size: 0.85rem !important;
     }
+
+    .faq-accordion {
+        padding: 0 20px; /* Prevent touching edges on mobile */
+    }
+
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+    }
+
+    .reviews-grid {
+        gap: 60px; /* Slightly tighter stacking for mobile */
+    }
+
+    .review-card {
+        padding: 24px;
+    }
+
+    /* Mobile CTA Adjustments */
+    .trust-pill {
+        top: auto;
+        bottom: 30px;
+        left: 20px;
+        right: auto;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .fab {
+        width: 54px;
+        height: 54px;
+    }
+
+    .room-tabs {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .room-tab-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1036,7 +1363,7 @@ h1, h2, h3, .logo-text {
         gap: 16px;
     }
     .glass-card {
-        padding: 20px;
+        padding: 24px;
     }
     .hero-title {
         font-size: 2rem;
